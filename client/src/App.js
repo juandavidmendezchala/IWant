@@ -1,7 +1,10 @@
-import {data} from './data.js'
+import HomeScreen from './screens/HomeScreen.js';
+import ProductScreen from './screens/ProductScreen.js';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="grid-container">
     <header className="row">
         <div>
@@ -13,47 +16,14 @@ function App() {
         </div>
     </header>
     <main>
-        <div className="row-center">
-          {
-            data.products.map(p =>(
-              <div key={p.id} className="card">
-                <a href={`/product/${p.id}`}>
-                <img className="medium" src={p.image} alt="product" />
-                </a>
-                <div className="card-body">
-                <a href={`/product/${p.id}`}>
-                        <h2>{p.name}</h2>
-                    </a>
-                    <div className="rating">
-                        <span>
-                            <i className="fa fa-star"></i>
-                        </span>
-                        <span>
-                            <i className="fa fa-star"></i>
-                        </span>
-                        <span>
-                            <i className="fa fa-star"></i>
-                        </span>
-                        <span>
-                            <i className="fa fa-star"></i>
-                        </span>
-                        <span>
-                            <i className="fa fa-star"></i>
-                        </span>
-                    </div>
-                    <div className="price">
-                       {p.price} 
-                    </div>
-                </div>
-            </div>
-            ))
-          }            
-        </div>         
+      <Route path='/product/:id' component={ProductScreen}></Route>
+      <Route exact path='/' component={HomeScreen}></Route>
     </main>
     <footer className="row center">
         All Rigth Reserved
     </footer>
 </div>   
+</BrowserRouter>
   );
 }
 

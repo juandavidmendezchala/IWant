@@ -1,0 +1,26 @@
+{
+  "name": "e-commerce",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch api --exec node --experimental-modules api/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juandavidmendezchala/IWant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juandavidmendezchala/IWant/issues"
+  },
+  "homepage": "https://github.com/juandavidmendezchala/IWant#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}

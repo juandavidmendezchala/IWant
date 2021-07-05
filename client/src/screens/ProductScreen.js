@@ -1,11 +1,14 @@
 import React from 'react';
+import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom'
-import {data} from '../data'
 import Rating from '../components/Rating';
 
 export default function ProductScreen(props) {
-    const product = data.products.find(x => x._id === props.match.params.id)
+
+    const listProducts = useSelector(state => state.productList)
+    const product = listProducts.products.find(x => x._id === props.match.params.id)
     if(!product) {
+        console.log(listProducts.products)
         return  <div> Product Not Found</div>
     }
     return(
@@ -45,7 +48,7 @@ export default function ProductScreen(props) {
                                     {
                                     product.countInStock > 0 ? 
                                     (<span className="success">In Stock</span>) :
-                                    (<span className="error">Unavaiable</span>)
+                                    (<span className="danger">Unavaiable</span>)
                                     }</div>
                                 </div>
                             </li>

@@ -17,7 +17,6 @@ export const data = {
     ],
     products: [
         {
-            _id: '1',
             name: 'Nike Slim Shirt',
             category: 'Shirts',
             image: '/images/p1.jpg',
@@ -29,7 +28,6 @@ export const data = {
             description: 'high quality product'
         },
         {
-            _id: '2',
             name: 'Adidas coat',
             category: 'coat',
             image: '/images/p2.jpg',
@@ -41,7 +39,6 @@ export const data = {
             description: 'high quality product'
         },
         {
-            _id: '3',
             name: 'Nike shoes',
             category: 'Shirts',
             image: '/images/p3.jpg',
@@ -53,7 +50,6 @@ export const data = {
             description: 'high quality product'
         },
         {
-            _id: '4',
             name: 'Anyway Shirt',
             category: 'Shirt',
             image: '/images/p4.jpg',
@@ -65,7 +61,6 @@ export const data = {
             description: 'high quality product'
         },
         {
-            _id: '5',
             name: 'Adidas pant',
             category: 'pants',
             image: '/images/p5.jpg',

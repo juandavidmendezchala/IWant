@@ -4,6 +4,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import CartScreen from './screens/CartScreen.js';
 import {Link} from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import SinginScreen from './screens/SigninScreen.js';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
     <main>
       <Route path='/cart/:id?' component={CartScreen}></Route>
       <Route path='/product/:id' component={ProductScreen}></Route>
+      <Route path='/signin' component={SinginScreen}></Route>
       <Route exact path='/' component={HomeScreen}></Route>
     </main>
     <footer className="row center">
